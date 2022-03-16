@@ -1,6 +1,6 @@
 import React from "react";
 import "./MetamaskButton.css";
-import { hooks, metaMask } from "../../web3/connectors";
+import { hooks, metaMask } from "../../connectors/metamask";
 
 const onClick: React.MouseEventHandler<HTMLButtonElement> = async () => {
   await metaMask.activate(1);
