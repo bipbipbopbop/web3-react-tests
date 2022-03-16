@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { MetamaskButton } from "../MetamaskButton";
+import { WalletConnectButton } from "../WalletConnectButton";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           Learn React
         </a>
         <MetamaskButton />
+        <div style={{ margin: "1rem" }} />
+        <WalletConnectButton />
       </header>
     </div>
   );
