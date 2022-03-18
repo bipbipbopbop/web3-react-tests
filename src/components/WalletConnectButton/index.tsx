@@ -9,7 +9,7 @@ import { hooks, walletConnect } from "../../connectors/walletConnect";
  */
 
 const onClickConnect: React.MouseEventHandler<HTMLButtonElement> = async () => {
-  await walletConnect.activate(1);
+  await walletConnect.activate();
 };
 
 const onClickDisconnect: React.MouseEventHandler<
