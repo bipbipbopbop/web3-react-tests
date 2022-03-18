@@ -17,7 +17,15 @@ const CHAINS: {
   [chainId: number]: BasicChainInformation; // | ExtendedChainInformation;
 } = {
   1: {
-    urls: ["https://cloudflare-eth.com"],
+    urls: [
+      process.env.infuraKey
+        ? `https://mainnet.infura.io/v3/${process.env.infuraKey}`
+        : undefined,
+      process.env.alchemyKey
+        ? `https://eth-mainnet.alchemyapi.io/v2/${process.env.alchemyKey}`
+        : undefined,
+      "https://cloudflare-eth.com",
+    ].filter((url) => url !== undefined) as string[],
     name: "Mainnet",
   },
 };
